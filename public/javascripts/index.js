@@ -40,13 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("oneNote").value = "";
     });
 
-    document.getElementById("buttonSave").addEventListener("click", function() {
-        saveCarItem(document.getElementById("IDparmHere").innerHTML);
-        createList();
-        document.location.href = "index.html#ListAll";
-    });
 
-    document.getElementById("buttonDelete").addEventListener("click", function() {
+    document.getElementById("buttonDelete2").addEventListener("click", function() {
         deleteCarItem(document.getElementById("IDparmHere").innerHTML);
         createList();
         document.location.href = "index.html#ListAll";
