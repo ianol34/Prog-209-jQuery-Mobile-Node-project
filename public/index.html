@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car List</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="stylesheets/themes/Car-app-theme.css" />
+  <link rel="stylesheet" href="stylesheets/themes/jquery.mobile.icons.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+  <link rel = "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="home" data-them='e'>
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Car List</h1>
+      <div data-role="navbar" data-theme='e' id="nav_bar">
+        <ul>
+              <li><a href="#home" class='active-page'><i class = "fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#Edit"><i class = "fa fa-plus"></i> Add Car</a></li>
+              <li><a href="#ListAll"><i class ="fa fa-sticky-note"></i> List Cars</a></li>
+              <li><a href="javascript:alert('Please select the item from the list that you would like to view the details for, modify or delete.');"><i class = "fa fa-info-circle"></i> Change Listing</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <div class="newFont"> 
+                  <img id="image1"  src= "./images/877055.jpg" alt ="blue F40" class = "Home_Slides">
+              
+                <h3>Welcome to Car Index!</h3>
+                <p>Organize and keep track of your favorite cars!</p>
+              
+        
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='a' class="footer" >
+      <h1>Copyright 2021 Ian Olson for PROG 209</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+    <div data-role="page" id="Edit">
+        <!--  page header -->
+        <div data-role="header" data-theme='a'>
+          <h1>Add a car to the list</h1>
+          <div data-role="navbar" data-theme='b' id="nav_bar">
+            <ul>
+              <li><a href="#home"><i class = "fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#Edit"class='active-page' ><i class = "fa fa-plus"></i> Add Car</a></li>
+              <li><a href="#ListAll"><i class ="fa fa-sticky-note"></i> List Cars</a></li>
+              <li><a href="javascript:alert('Please select the item from the list that you would like to view the details for, modify or delete.');"><i class = "fa fa-info-circle"></i> Change Listing</a></li>
+            </ul>
+          </div><!-- /navbar -->
+         
+        </div>
+    
+        <div data-role="content" data-theme='c'>
+          <div class="ui-field-contain">
+            <label for="name" >Car Name:</label>
+            <input type="text" id="carName" size="25" required maxlength = "25"/>
+          </div> 
+          <div class="ui-field-contain">
+            <label for="price">Price</label> 
+            <input type="text" id="carPrice" size="25" required maxlength = "25"/>
+          </div>
+          <div class="ui-field-contain">
+            <label for="note" >Notes: </label> 
+            <textarea id="oneNote" size="50" required maxlength= "50"></textarea>
+          </div>
+          <input type="button" value="Save" id="buttonSave" data-inline="true" class="center"/>
+          <input type="button" value="Delete" id="buttonDelete" data-inline="true" class="center" style="background: rgb(216, 11, 11)"/>
+        </div>
+		
+        <!--   page footer -->
+        <div data-role="footer" data-theme='a'class="footer" >
+          <h1>Copyright 2021 Ian Olson for PROG 209</h1>
+        </div>
+      </div>
+      <!-- End of  page ------------------------------------------------------------------>
+      <div data-role="page" id="ListAll">
+        <!--   page header -->
+        <div data-role="header" data-theme='a'>
+          <h1>View the list of favorite cars</h1>
+          <div data-role="navbar" data-theme='b' id="nav_bar">
+            <ul>
+              <li><a href="#home"><i class = "fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#Edit"><i class = "fa fa-plus"></i> Add Car</a></li>
+              <li><a href="#ListAll" class='active-page'><i class ="fa fa-sticky-note"></i> List Cars</a></li>
+              <li><a href="javascript:alert('Please select the item from the list that you would like to view the details for, modify or delete.');"><i class = "fa fa-info-circle"></i> Change Listing</a></li>
+              </ul>
+          </div><!-- /navbar -->
+        </div>
+        <!--   page content -->
+        <div data-role="content" data-theme='e'>
+          <p> Here is the list of your favorite cars: </p>
+          <div id="divCarList">
+          </div>
+          <input type="button" value="Sort By Year" id="buttonSortName" data-inline="true" class="center"/>
+          <input type="button" value="Sort By Price" id="buttonSortPrice" data-inline="true" class="center"/>
+        </div>
+
+        <!--   page footer -->
+        <div data-role="footer" data-theme='a'class="footer" >
+          <h1>Copyright 2021 Ian Olson for PROG 209</h1>
+        </div>
+      </div>
+      </div>
+      <!-- End of  page ------------------------------------------------------------------>
+      <div data-role="page" id="ViewDetail">
+        <!--   page header -->
+        <div data-role="header" data-theme='a'>
+          <h1>View a detail info, modify or delete the selected Car item</h1>
+          <div data-role="navbar" data-theme='b' id="nav_bar">
+            <ul>
+              <li><a href="#home"><i class = "fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#Edit"><i class = "fa fa-plus"></i> Add Car</a></li>
+              <li><a href="#ListAll"><i class ="fa fa-sticky-note"></i> List Cars</a></li>
+              <li><a href="javascript:alert('Please select the item from the list that you would like to view the details for, modify or delete.');" class='active-page'><i class = "fa fa-info-circle"></i> Change Listing</a></li>
+              </ul>
+          </div><!-- /navbar -->
+        </div>
+        <!--   page content -->
+        <div data-role="content" data-theme='c'>
+          <div class="ui-field-contain">
+            <label for="name" >Car Name:</label>
+            <input type="text" id="carName2" size="25" required maxlength = "25"/>
+          </div> 
+          <div class="ui-field-contain">
+            <label for="price">Price</label> 
+            <input type="text" id="carPrice2" size="25" required maxlength = "25"/>
+          </div> 
+          <div class="ui-field-contain">
+            <label for="note" >Notes: </label> 
+            <textarea id="oneNote2" size="50" required maxlength= "50"></textarea>
+          </div>
+          <input type="button" value="Save" id="buttonSave" data-inline="true" class="center"/>
+          <input type="button" value="Delete" id="buttonDelete" data-inline="true" class="center" style="background: rgb(216, 11, 11)"/>
+        </div>
+
+
+        <!--   page footer -->
+        <div data-role="footer" data-theme='a' class="footer">
+          <h1>Copyright 2021 Ian Olson for PROG 209</h1>
+        </div>
+      </div>
+      </div>
+      <!-- End of  page ------------------------------------------------------------------>      
+      <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the CarItem ID -->
+    </body>
+    <script src="/javascripts/index.js"></script>
+    </html>

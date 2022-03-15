@@ -1,0 +1,75 @@
+
+ 
+h1 {
+  color: #5050ff;
+}
+
+li {
+  color: #5050ff;
+  font-size:      25px;
+  font-weight:    bold;
+}
+
+.myHeader {
+  text-align: center;
+  font-size:      30px;
+  font-weight:    bold;
+  color:  #7777ff;
+}
+
+
+.newFont {
+  text-align: center;
+  font-size:      25px;
+  font-weight:    bold;
+  color:  #5050ff;
+}
+
+#divcarList ul li a {
+  color: #5050ff;
+  font-size:      25px;
+
+}
+
+input[type=button] {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+ }
+
+ .button:hover {background-color:  #3e8e41}
+
+ .button:active{
+   background-color: #3e8341;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+ }
+.center {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.image1 {
+  width: 100%;
+}
+.image2 {
+  width: 100%;
+}
+
+.image3 {
+  width: 100%;
+}
+
+#nav_bar ul li a.active-page
+{
+  background-color:#7777ff;
+}
